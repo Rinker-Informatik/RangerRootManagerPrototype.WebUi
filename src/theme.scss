@@ -1,5 +1,8 @@
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css"; 
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 @use '@angular/material' as mat;
 // Plus imports for other components in your app.
 

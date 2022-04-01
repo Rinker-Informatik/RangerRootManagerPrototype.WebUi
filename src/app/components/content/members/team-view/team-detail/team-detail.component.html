@@ -1,0 +1,81 @@
+<p>
+	<mat-form-field appearance="legacy">
+		<mat-label>Teamname</mat-label>
+		<input matInput placeholder="Teamname">
+	</mat-form-field>
+</p>
+  <p>
+	<mat-label>Teamleiter</mat-label>
+	<mat-list role="list">
+		<mat-list-item role="listitem">
+			<form class="example-form">
+				<mat-form-field class="example-full-width" >
+				  <mat-label>Assignee</mat-label>
+				  <input type="text" matInput [formControl]="myControl" [matAutocomplete]="auto">
+				  <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+					<mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+					  {{option.name}}
+					</mat-option>
+				  </mat-autocomplete>
+				</mat-form-field>
+			  </form>
+			  <div class="example-button-container">
+				<button mat-raised-button aria-label="Example icon button with a heart icon">
+				  <mat-icon>add</mat-icon>
+				</button>
+			  </div>
+		</mat-list-item>
+		<mat-list-item role="listitem">Teamling 2</mat-list-item>
+		<mat-list-item role="listitem">Teamling 3</mat-list-item>
+	</mat-list>
+  </p>
+  <p>
+	<mat-label>Teamhelfer</mat-label>
+	<mat-list role="list">
+		<mat-list-item role="listitem">
+			<form class="example-form">
+				<mat-form-field class="example-full-width" >
+				  <mat-label>Assignee</mat-label>
+				  <input type="text" matInput [formControl]="myControl" [matAutocomplete]="auto">
+				  <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+					<mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+					  {{option.name}}
+					</mat-option>
+				  </mat-autocomplete>
+				</mat-form-field>
+			  </form>
+			  <div class="example-button-container">
+				<button mat-raised-button aria-label="Example icon button with a heart icon">
+				  <mat-icon>add</mat-icon>
+				</button>
+			  </div>
+		</mat-list-item>
+		<mat-list-item role="listitem">Teamling 2</mat-list-item>
+		<mat-list-item role="listitem">Teamling 3</mat-list-item>
+	</mat-list>
+  </p>
+  <p>
+	<mat-label>Teamlinge</mat-label>
+	<mat-list role="list">
+		<mat-list-item role="listitem">
+			<form class="example-form">
+				<mat-form-field class="example-full-width" >
+				  <mat-label>Assignee</mat-label>
+				  <input type="text" matInput [formControl]="myControl" [matAutocomplete]="auto">
+				  <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+					<mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+					  {{option.name}}
+					</mat-option>
+				  </mat-autocomplete>
+				</mat-form-field>
+			  </form>
+			  <div class="example-button-container">
+				<button mat-raised-button aria-label="Example icon button with a heart icon">
+				  <mat-icon>add</mat-icon>
+				</button>
+			  </div>
+		</mat-list-item>
+		<mat-list-item role="listitem">Teamling 2</mat-list-item>
+		<mat-list-item role="listitem">Teamling 3</mat-list-item>
+	</mat-list>
+</p>

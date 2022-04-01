@@ -1,9 +1,48 @@
-<app-topbar class="top_bar"></app-topbar>
-<mat-drawer-container class="example-container">
-    <mat-drawer mode="side" opened>
-        <app-sidebar></app-sidebar>
-    </mat-drawer>
-    <mat-drawer-content>
-        <router-outlet></router-outlet>
-    </mat-drawer-content>
-</mat-drawer-container>
+<ng-container>
+	<app-topbar></app-topbar>	
+
+	<mat-drawer-container class="example-container mat-typography" autosize>
+		<mat-drawer #drawer mode="side" disableClose="true" opened="true">
+		  <button mat-mini-fab (click)="isExpanded = !isExpanded" style="margin: 10px;">
+			<mat-icon aria-label="Menu">menu</mat-icon>
+		  </button>
+	  
+		  <mat-nav-list>
+			<mat-list-item>
+			  <mat-icon mat-list-icon class="icon">groups</mat-icon>
+			  <h4 mat-line *ngIf="isExpanded" routerLink="members">Mitglieder</h4>
+			</mat-list-item>
+			<mat-list-item>
+			  <mat-icon mat-list-icon>construction</mat-icon>
+			  <h4 mat-line *ngIf="isExpanded">Material</h4>
+			</mat-list-item>
+			<mat-list-item>
+			  <mat-icon mat-list-icon>festival</mat-icon>
+			  <h4 mat-line *ngIf="isExpanded">Veranstaltungen</h4>
+			</mat-list-item>
+			<mat-list-item>
+			  <mat-icon mat-list-icon>calendar_today</mat-icon>
+			  <h4 mat-line *ngIf="isExpanded">Termine</h4>
+			</mat-list-item>
+			<mat-list-item>
+			  <mat-icon mat-list-icon>euro_symbol</mat-icon>
+			  <h4 mat-line *ngIf="isExpanded">Finanzen</h4>
+			</mat-list-item>
+			<mat-list-item>
+			  <mat-icon mat-list-icon>house</mat-icon>
+			  <h4 mat-line *ngIf="isExpanded">Gebäude</h4>
+			</mat-list-item>
+			<mat-list-item>
+			  <mat-icon mat-list-icon>settings</mat-icon>
+			  <h4 mat-line *ngIf="isExpanded">Einstellungen</h4>
+			</mat-list-item>
+		  </mat-nav-list>
+		</mat-drawer>
+	  
+		<div class="example-sidenav-content">
+			<router-outlet></router-outlet>
+		</div>
+	  </mat-drawer-container>
+
+	<mat-toolbar class="example-footer">Footer</mat-toolbar>
+</ng-container>
