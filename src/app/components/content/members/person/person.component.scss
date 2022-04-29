@@ -1,0 +1,62 @@
+@use '@angular/material' as mat;
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css"; 
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+.detail {
+    padding-left: 40px;
+    padding-top: 80px;
+    padding-right: 40px;
+    margin: 0px;
+}
+.example-container .mat-form-field + .mat-form-field {
+    margin-left: 8px;
+  }
+  
+  .example-container .mat-form-field {
+    width: 220px;
+  }
+  
+  .example-container form {
+    margin-bottom: 20px;
+  }
+  
+  .example-container form > * {
+    margin: 5px 0;
+  }
+  
+  .example-container .mat-radio-button {
+    margin: 0 12px;
+  }
+  
+
+  .column {
+    float: left;
+    width: 25%;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .save_button {
+    margin: 50px;
+    float: right;
+  }
+  mat-form-field{
+    margin-right: 10px;
+  }
+  table {
+    width: 100%;
+  }

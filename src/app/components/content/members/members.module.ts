@@ -11,18 +11,28 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatTableModule } from '@angular/material/table';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatNativeDateModule, MatOptionModule } from '@angular/material/core';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { TeamViewComponent } from "./team-view/team-view.component";
 import { MembersRoutingModule } from "./members-routing.module";
 import { TeamDetailComponent } from "./team-view/team-detail/team-detail.component";
 import { CommonModule } from "@angular/common";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { PersonComponent } from "./person/person.component";
 
 @NgModule({
   declarations: [
       MembersOverviewComponent,
       TeamViewComponent,
-      TeamDetailComponent
+      TeamDetailComponent,
+      PersonComponent
   ],
   imports: [
     MatGridListModule,
@@ -39,6 +49,15 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
     BrowserAnimationsModule,
     BrowserModule,
     FormsModule,
+    MatButtonModule,
+    MatDividerModule,
+    MatTooltipModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatOptionModule,
+    MatExpansionModule,
+    MatSlideToggleModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: []
