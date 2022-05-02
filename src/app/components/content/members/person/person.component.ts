@@ -18,6 +18,7 @@ export interface PeriodicElement {
 
 const ELEMENT_DATA: PeriodicElement[] = [
   {name: 'Hydrogen', vorname:"test", telefon: 'H', mobile: "dwadwadaw", mail:"awdwadwa@ioesjfes.de", abholerlaubnis: true},
+  {name: 'Hydrogen', vorname:"test", telefon: 'H', mobile: "dwadwadaw", mail:"awdwadwa@ioesjfes.de", abholerlaubnis: true},
 ];
 @Component({
   selector: 'app-person',

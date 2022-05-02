@@ -16,6 +16,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTableModule } from '@angular/material/table';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatNativeDateModule, MatOptionModule } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
@@ -57,7 +58,8 @@ import { PersonComponent } from "./person/person.component";
     MatOptionModule,
     MatExpansionModule,
     MatSlideToggleModule,
-    MatTableModule
+    MatTableModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: []

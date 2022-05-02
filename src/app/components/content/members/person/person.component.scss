@@ -51,7 +51,8 @@
   }
 
   .save_button {
-    margin: 50px;
+    margin-right: 50px;
+    margin-top: 50px;
     float: right;
   }
   mat-form-field{
@@ -59,4 +60,10 @@
   }
   table {
     width: 100%;
+  }
+  mat-icon{
+    font-size: 36px;
+  }
+  mat-checkbox{
+    margin-right: 10px;
   }
