@@ -62,8 +62,17 @@
     width: 100%;
   }
   mat-icon{
-    font-size: 36px;
   }
   mat-checkbox{
     margin-right: 10px;
+  }
+
+  .allergy-button-green {
+    background-color: green;
+  }
+  .allergy-button-yellow {
+    background-color: yellow;
+  }
+  .allergy-button-red {
+    background-color: red;
   }

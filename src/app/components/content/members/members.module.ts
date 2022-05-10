@@ -16,6 +16,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTableModule } from '@angular/material/table';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatNativeDateModule, MatOptionModule } from '@angular/material/core';
@@ -27,13 +28,15 @@ import { TeamDetailComponent } from "./team-view/team-detail/team-detail.compone
 import { CommonModule } from "@angular/common";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { PersonComponent } from "./person/person.component";
+import { MembersListComponent } from "./members-overview/members-list/members-list.component";
 
 @NgModule({
   declarations: [
       MembersOverviewComponent,
       TeamViewComponent,
       TeamDetailComponent,
-      PersonComponent
+      PersonComponent,
+      MembersListComponent,
   ],
   imports: [
     MatGridListModule,
@@ -59,7 +62,8 @@ import { PersonComponent } from "./person/person.component";
     MatExpansionModule,
     MatSlideToggleModule,
     MatTableModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatButtonToggleModule
   ],
   providers: [],
   bootstrap: []

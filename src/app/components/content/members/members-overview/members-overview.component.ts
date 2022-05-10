@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MembersOverviewComponent implements OnInit {
 
+  rootOverview: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {

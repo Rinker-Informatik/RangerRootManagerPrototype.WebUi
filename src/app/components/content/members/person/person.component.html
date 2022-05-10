@@ -187,18 +187,167 @@
         <mat-expansion-panel-header>
           <mat-panel-title>Gesundheit</mat-panel-title>
         </mat-expansion-panel-header>
-          <form >
-            <div>
-              <mat-checkbox [formControl]="myControl">Schwimmer</mat-checkbox>
-            </div>
-            <div>
-              <mat-checkbox [formControl]="myControl">Recht am eigenen Bild(Grundgesetzt §22)</mat-checkbox>
-            </div>
-            <div>
-              <mat-checkbox [formControl]="myControl">Darf alleine gehen</mat-checkbox>
-            </div>
-          </form>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Krankenkasse</mat-label>
+          <input type="text" matInput [formControl]="myControl">
+        </mat-form-field>
+        <br>
+        <mat-label>Allergien</mat-label>
+        <form class="example-form">
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Name</mat-label>
+            <input type="text" matInput [formControl]="myControl">
+        </mat-form-field>
+        
+        <mat-button-toggle-group #group="matButtonToggleGroup">
+          <mat-button-toggle value="green" class="allergy-button-green">
+            <mat-icon>yard</mat-icon>
+          </mat-button-toggle>
+          <mat-button-toggle value="yellow" class="allergy-button-yellow">
+            <mat-icon>yard</mat-icon>
+          </mat-button-toggle>
+          <mat-button-toggle value="red" class="allergy-button-red">
+            <mat-icon>yard</mat-icon>
+          </mat-button-toggle>
+        </mat-button-toggle-group>
+        <button mat-button matTooltip="Erzeugt eine neue Person">
+          <mat-icon>add</mat-icon>
+        </button>
+        </form>
+        <table mat-table [dataSource]="dataSource2" class="mat-elevation-z8">
 
+          <!--- Note that these columns can be defined in any order.
+                The actual rendered columns are set as a property on the row definition" -->
+        
+          <!-- Position Column -->
+          <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef> Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+          </ng-container>
+        
+          <!-- Name Column -->
+          <ng-container matColumnDef="strength">
+            <th mat-header-cell *matHeaderCellDef> Stärke </th>
+            <td mat-cell *matCellDef="let element"> <mat-icon class="allergy-button-red">yard</mat-icon> </td>
+          </ng-container>
+        
+          <tr mat-header-row *matHeaderRowDef="displayedColumns2"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns2;"></tr>
+        </table>
+        <br>
+        <mat-label>Erkrankungen</mat-label>
+        <form class="example-form">
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Name</mat-label>
+            <input type="text" matInput [formControl]="myControl">
+          </mat-form-field>
+          <button mat-button matTooltip="Erzeugt eine neue Person">
+            <mat-icon>add</mat-icon>
+          </button>
+        </form>
+        <table mat-table [dataSource]="dataSource4" class="mat-elevation-z8">
+
+          <!--- Note that these columns can be defined in any order.
+                The actual rendered columns are set as a property on the row definition" -->
+        
+          <!-- Position Column -->
+          <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef> Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+          </ng-container>
+        
+          <tr mat-header-row *matHeaderRowDef="displayedColumns4"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns4;"></tr>
+        </table>
+        <br>
+        
+
+        <mat-label>Medikamente</mat-label>
+        <form class="example-form">
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Name</mat-label>
+            <input type="text" matInput [formControl]="myControl">
+          </mat-form-field>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Einheit</mat-label>
+            <input type="text" matInput [formControl]="myControl">
+          </mat-form-field>
+          <div>
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Morgens</mat-label>
+              <input type="text" matInput [formControl]="myControl">
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Mittags</mat-label>
+              <input type="text" matInput [formControl]="myControl">
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Abends</mat-label>
+              <input type="text" matInput [formControl]="myControl">
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Nachts</mat-label>
+              <input type="text" matInput [formControl]="myControl">
+            </mat-form-field>
+          </div>
+          <p>
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Menge Bedarf</mat-label>
+              <input type="text" matInput [formControl]="myControl">
+            </mat-form-field>
+            <mat-checkbox formControlName="pepperoni">Bedarf</mat-checkbox>  
+            <button mat-button matTooltip="Erzeugt eine neue Person">
+              <mat-icon>add</mat-icon>
+            </button>
+          </p>
+        </form>
+        <table mat-table [dataSource]="dataSource3" class="mat-elevation-z8">
+
+          <!--- Note that these columns can be defined in any order.
+                The actual rendered columns are set as a property on the row definition" -->
+        
+          <!-- Position Column -->
+          <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef> Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+          </ng-container>
+          <ng-container matColumnDef="unit">
+            <th mat-header-cell *matHeaderCellDef> Einheit </th>
+            <td mat-cell *matCellDef="let element"> {{element.unit}} </td>
+          </ng-container>
+          <ng-container matColumnDef="morning">
+            <th mat-header-cell *matHeaderCellDef> Morgens </th>
+            <td mat-cell *matCellDef="let element"> {{element.morning}} </td>
+          </ng-container>
+          <ng-container matColumnDef="midday">
+            <th mat-header-cell *matHeaderCellDef> Mittags </th>
+            <td mat-cell *matCellDef="let element"> {{element.midday}} </td>
+          </ng-container>
+          <ng-container matColumnDef="evening">
+            <th mat-header-cell *matHeaderCellDef> Abends </th>
+            <td mat-cell *matCellDef="let element"> {{element.evening}} </td>
+          </ng-container>
+          <ng-container matColumnDef="night">
+            <th mat-header-cell *matHeaderCellDef> Nachts </th>
+            <td mat-cell *matCellDef="let element"> {{element.night}} </td>
+          </ng-container>
+          <ng-container matColumnDef="requirement">
+            <th mat-header-cell *matHeaderCellDef> Bedarf </th>
+            <td mat-cell *matCellDef="let element"> <mat-icon aria-hidden="false" aria-label="Example home icon">done</mat-icon> </td>
+          </ng-container>
+          <ng-container matColumnDef="requirement_quantity">
+            <th mat-header-cell *matHeaderCellDef> Bedarf menge </th>
+            <td mat-cell *matCellDef="let element"> {{element.requirement_quantity}} </td>
+          </ng-container>
+        
+          <tr mat-header-row *matHeaderRowDef="displayedColumns3"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns3;"></tr>
+        </table>
+        <br>
+        <mat-form-field appearance="fill">
+          <mat-label>Sonstiges</mat-label>
+          <textarea matInput></textarea>
+        </mat-form-field>
       </mat-expansion-panel> 
       <mat-expansion-panel (opened)="panelOpenState = true"
       (closed)="panelOpenState = false">
@@ -254,6 +403,7 @@
               </mat-autocomplete>
             </mat-form-field>
           </div>
+          <br>
           <mat-label>Mitgliedschaft</mat-label>
           <div>
             <mat-checkbox [formControl]="myControl">Leiteranmeldung</mat-checkbox>
@@ -272,6 +422,7 @@
               <input type="text" matInput [formControl]="myControl">
             </mat-form-field>
           </div>
+          <br>
           <mat-label>Sonstiges</mat-label>
           <div>
             <mat-checkbox [formControl]="myControl">Ersthelfer</mat-checkbox>

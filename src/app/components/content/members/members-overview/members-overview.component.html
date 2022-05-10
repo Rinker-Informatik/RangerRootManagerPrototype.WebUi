@@ -1,9 +1,18 @@
-<mat-grid-list cols="5" rowHeight="550px">
-    <mat-grid-tile><app-team-view></app-team-view></mat-grid-tile>
-    <mat-grid-tile><app-team-view></app-team-view></mat-grid-tile>
-    <mat-grid-tile><app-team-view></app-team-view></mat-grid-tile>
-    <mat-grid-tile><app-team-view></app-team-view></mat-grid-tile>
-    <mat-grid-tile><app-team-view></app-team-view></mat-grid-tile>
-    <mat-grid-tile><app-team-view></app-team-view></mat-grid-tile>
-    <mat-grid-tile><app-team-view></app-team-view></mat-grid-tile>
-</mat-grid-list>
+<div>
+    <button mat-button routerLink="./overview">Mitglieder Übersicht</button>
+    <mat-slide-toggle [(ngModel)]="rootOverview">Stamm Übersicht</mat-slide-toggle>
+</div>
+<div *ngIf="!rootOverview">
+    <mat-grid-list cols="5" rowHeight="550px">
+        <mat-grid-tile><app-team-view></app-team-view></mat-grid-tile>
+        <mat-grid-tile><app-team-view></app-team-view></mat-grid-tile>
+        <mat-grid-tile><app-team-view></app-team-view></mat-grid-tile>
+        <mat-grid-tile><app-team-view></app-team-view></mat-grid-tile>
+        <mat-grid-tile><app-team-view></app-team-view></mat-grid-tile>
+        <mat-grid-tile><app-team-view></app-team-view></mat-grid-tile>
+        <mat-grid-tile><app-team-view></app-team-view></mat-grid-tile>
+    </mat-grid-list>
+</div>
+<div *ngIf="rootOverview">
+    
+</div>
